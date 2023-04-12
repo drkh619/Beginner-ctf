@@ -1,9 +1,28 @@
 <?php
-	session_start();
-	if (isset($_SESSION["username"])) {
-		header("Location: profile.php");
-		exit();
-	}
+session_start();
+
+if(isset($_SESSION['username'])) {
+  header("Location: profile.php");
+}
+
+if(isset($_POST['username']) && isset($_POST['password'])) {
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+
+  // Read the user data from the JSON file
+  $users_json = file_get_contents('../data/users.json');
+  $users = json_decode($users_json, true);
+
+  foreach($users as $user) {
+    if($user['username'] == $username && password_verify($password, $user['password'])) {
+      $_SESSION['username'] = $username;
+      header("Location: profile.php");
+      exit();
+    }
+  }
+  
+  echo "<script>alert('Invalid username or password.')</script>";
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,7 +30,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Login | Cyberpunk</title>
-	<link rel="stylesheet" type="text/css" href="css/cyberpunk.css">
+	<link rel="stylesheet" type="text/css" href="../css/cyberpunk.css">
 </head>
 <body>
 	<header>
@@ -20,6 +39,7 @@
 			<ul>
 				<li><a href="login.php" class="active">Login</a></li>
 				<li><a href="signup.php">Signup</a></li>
+				<li><a href="submit_flag.php">Submit Flag</a></li> 
 			</ul>
 		</nav>
 	</header>
@@ -36,24 +56,6 @@
 		</form>
 		<p>Don't have an account? <a href="signup.php">Sign up</a> now.</p>
 	</main>
-	<?php
-		if ($_SERVER["REQUEST_METHOD"] == "POST") {
-			$username = $_POST["username"];
-			$password = $_POST["password"];
-
-			$users = [];
-			if (file_exists("../data/users.json")) {
-				$users = json_decode(file_get_contents("../data/users.json"), true);
-			}
-
-			if (array_key_exists($username, $users) && password_verify($password, $users[$username]["password"])) {
-				$_SESSION["username"] = $username;
-				header("Location: profile.php");
-				exit();
-			} else {
-				echo "<script>alert('Invalid username or password.')</script>";
-			}
-		}
-	?>
+	
 </body>
 </html>

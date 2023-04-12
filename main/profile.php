@@ -14,7 +14,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Profile | Cyberpunk</title>
-	<link rel="stylesheet" type="text/css" href="css/cyberpunk.css">
+	<link rel="stylesheet" type="text/css" href="../css/cyberpunk.css">
 </head>
 <body>
 	<header>
@@ -22,13 +22,12 @@
 		<nav>
 			<ul>
 				<li><a href="logout.php">Logout</a></li>
+				<li><a href="submit_flag.php">Submit Flag</a></li>
 			</ul>
 		</nav>
 	</header>
 	<main>
 		<h1>Welcome, <?php echo $_SESSION["username"]; ?>!</h1>
-
-		<p>Here is a <a href="53cr3t.php">Secret</a> for you!</p>
 	
 	    <p>Your current email is: <?php echo $_SESSION['email']; ?></p>
 	    <form method="POST" action="update_email.php">
