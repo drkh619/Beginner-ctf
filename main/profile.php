@@ -27,7 +27,12 @@
 	</header>
 	<main>
 		<h1>Welcome, <?php echo $_SESSION["username"]; ?>!</h1>
-		<p>Your email address is <?php echo $user["email"]; ?></p>
+	
+	    <p>Your current email is: <?php echo $_SESSION['email']; ?></p>
+	    <form method="POST" action="update_email.php">
+		    <label for="new_email">Enter your new email:</label>
+		    <input type="email" id="new_email" name="new_email" required>
+		    <input type="submit" value="Update">
 	</main>
 </body>
 </html>
