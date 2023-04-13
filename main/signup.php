@@ -64,6 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		<h1>Cyberpunk</h1>
 		<nav>
 			<ul>
+				<li><a href="main.php">Home</a></li>
 				<li><a href="login.php">Login</a></li>
 				<li><a href="signup.php" class="active">Signup</a></li>
 				<li><a href="submit_flag.php">Submit Flag</a></li>

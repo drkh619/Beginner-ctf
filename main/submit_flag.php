@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -10,13 +13,25 @@
 <body>
 	<header>
 		<h1>CTF Platform</h1>
-		<nav>
+		<?php if(isset($_SESSION['username'])) { ?>
+      <nav>
 			<ul>
+				<li><a href="main.php">Home</a></li>
 				<li><a href="profile.php">Profile</a></li>
-				<li><a href="submit_flag.php">Submit Flag</a></li>
+				<li><a href="submit_flag.php" class="active">Submit Flag</a></li>
 				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</nav>
+    <?php } else { ?>
+      <nav>
+			<ul>
+				<li><a href="main.php" class="active">Home</a></li>
+				<li><a href="login.php">Login</a></li>
+				<li><a href="signup.php" class="active">Signup</a></li>
+				<li><a href="submit_flag.php">Submit Flag</a></li>
+			</ul>
+		</nav>
+    <?php } ?>
 	</header>
 	<main>
 		<h2>Submit Flag</h2>

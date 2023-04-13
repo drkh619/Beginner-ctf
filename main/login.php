@@ -37,6 +37,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
 		<h1>Cyberpunk</h1>
 		<nav>
 			<ul>
+				<li><a href="main.php">Home</a></li>
 				<li><a href="login.php" class="active">Login</a></li>
 				<li><a href="signup.php">Signup</a></li>
 				<li><a href="submit_flag.php">Submit Flag</a></li> 
