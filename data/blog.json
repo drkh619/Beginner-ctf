@@ -3,21 +3,21 @@
         "id":1,
       "title": "First post",
       "author": "admin",
-      "date": "2023-04-15",
-      "content": "This is the first post on my blog!"
+      "date": "15-04-2023",
+      "content": "Hello users, admin here. Our team of top-notch security experts has implemented the most advanced security measures known to mankind!"
     },
     {
         "id":2,
       "title": "Second post",
       "author": "John Doe",
-      "date": "2023-04-16",
-      "content": "This is the second post on my blog!"
+      "date": "21-04-2023",
+      "content": "Hey folks, John Doe here. I've been using this website for a while now, and I have to say, I'm thoroughly impressed. The user interface is slick, the content is top-notch, and best of all, the security is out of this world. </p><p>In fact, I recently discovered a feature that really blew me away. I won't give too much away, but let's just say that if you tinker with your username a bit, you might be surprised at what you find. It's like a scavenger hunt, but instead of finding a prize, you get to experience the thrill of navigating the website's intricate security measures."
     },
     {
         "id":7,
       "title": "Secret Post",
       "author": "Admin",
-      "date": "2023-04-16",
+      "date": "23-03-2023",
       "content": "^FLAG^c2VjcmV0IHBhcmFtZXRlciB3b3c"
     }
   ]

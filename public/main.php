@@ -32,8 +32,8 @@ session_start();
     <?php } ?>
   </div>
   <div class="content">
-    <h1>Welcome to the Main Page</h1>
-    <p>Here, you can access your profile and submit flags for the CTF.</p>
+    <h1>Welcome to the Cyberpunk</h1>
+    <p>We take security very seriously... until something more interesting comes along.</p>
   </div>
   <div class="post">
   <?php

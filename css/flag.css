@@ -85,12 +85,55 @@ h1 {
   text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
 }
 
+.imp {
+  text-align: left;
+  margin: 20px;
+  padding: 20px;
+  background-color: #222;
+  border-radius: none;
+  border: 1px solid;
+  border-image: linear-gradient(90deg, #8D1C3E, #AC1E32, #CB211F, #E83500, #FF7700, #FFBD00, #FFEB00, #FFF800) 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.imp p {
+  font-family: Arial, sans-serif;
+  font-size: 26px;
+  display: flex;
+  font-weight: normal;
+  color: red;
+}
+
+.imp .important {
+  color: red;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.important-heading {
+  font-size: 30px;
+  display: inline-block;
+  text-indent: 3em;
+}
+
+.imp .important:before {
+  content: url('./alert1.png');
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 22px;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
 .post {
   text-align: left;
   margin: 20px;
   padding: 20px;
   background-color: #222;
-  border-radius: 15px;
+  border-radius: none;
   border: 1px solid;
   border-image: linear-gradient(90deg, #8D1C3E, #AC1E32, #CB211F, #E83500, #FF7700, #FFBD00, #FFEB00, #FFF800) 1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -122,6 +165,11 @@ h1 {
   margin-bottom: 10px;
 }
 
+.post b {
+  font-size:30px;
+  text-decoration: underline;	
+}
+
 .post a {
   color: #fff;
   text-decoration: underline;
@@ -147,7 +195,7 @@ li {
   letter-spacing: 2px;
 }
 
-.content form input[type="text"], .content form input[type="email"], .content form input[type="password"], .content form textarea {
+.content form input[type="text"] {
   border: none;
   padding: 10px;
   margin-bottom: 20px;
@@ -157,15 +205,15 @@ li {
   color: #333;
   font-size: 18px;
   font-family: 'Orbitron', sans-serif;
-  text-transform: uppercase;
   letter-spacing: 2px;
   border-radius: 5px;
   box-shadow: 2px 2px 2px rgba(0,0,0,0.6);
 }
 
-.content form input[type="text"]::placeholder, .content form input[type="email"]::placeholder, .content form input[type="password"]::placeholder, .content form textarea::placeholder {
+.content form input[type="text"]::placeholder {
   color: rgba(255,255,255,0.6);
 }
+
 
 .content form button[type="submit"] {
   background-color: #111129;

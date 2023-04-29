@@ -21,7 +21,7 @@ $flag1_checked = isset($_SESSION["flag1_checked"]) ? $_SESSION["flag1_checked"] 
 $flag2_checked = isset($_SESSION["flag2_checked"]) ? $_SESSION["flag2_checked"] : false;
 $flag3_checked = isset($_SESSION["flag3_checked"]) ? $_SESSION["flag3_checked"] : false;
 
-$expire_time = 60; // 20 minutes in seconds
+$expire_time = 60 * 20; // 20 minutes in seconds
 $now = time();
 
 if (($flag1_checked || $flag2_checked || $flag3_checked) && (!isset($_SESSION["flag_checked_time"]))) {
@@ -63,7 +63,7 @@ if (isset($_SESSION["flag_checked_time"]) && ($now - $_SESSION["flag_checked_tim
 
 <body>
 	<header>
-		<h1>CTF Platform</h1>
+		<h1>CTF</h1>
 		<?php if(isset($_SESSION['username'])) { ?>
       <nav>
 			<ul>
@@ -100,36 +100,42 @@ if (isset($_SESSION["flag_checked_time"]) && ($now - $_SESSION["flag_checked_tim
 	<p>		
     <?php if(($flag1_checked)) { ?>
         <span style="color: green; font-size: 20px">&#10003;</span>
-        <span style="color: green;"><b>Flag 1</b>:</span> <?php echo "Did you login? What does your profile look like? Hmm.. I would say check every corner"; ?><br>
+        <span style="color: green;"><b>Flag 1</b>:</span> <?php echo "Have you explored every corner of your profile page? I'd recommend taking a closer look, especially if you're interested in finding something that's not immediately visible. You might just stumble upon a hidden gem."; ?><br>
     <?php } else { ?>
-        <span><b>Flag 1</b>:</span> <?php echo "Did you login? What does your profile look like? Hmm.. I would say check every corner"; ?><br>
+        <span><b>Flag 1</b>:</span> <?php echo "Have you explored every corner of your profile page? I'd recommend taking a closer look, especially if you're interested in finding something that's not immediately visible. You might just stumble upon a hidden gem."; ?><br>
     <?php } ?>
 </p>
 
 <p>
     <?php if(($flag2_checked)) { ?>
         <span style="color: green; font-size: 20px">&#10003;</span>
-        <span style="color: green;"><b>Flag 2</b>:</span> <?php echo "Are you sure you didn't miss anything? PS: Parameters are fun!"; ?><br>
+        <span style="color: green;"><b>Flag 2</b>:</span> <?php echo "Remember, sometimes the most valuable information is hidden in plain sight. Don't forget to read between the lines and explore every aspect of the page. Oh, and keep an eye out for any parameters that might lead you down a path of discovery."; ?><br>
     <?php } else { ?>
-        <span><b>Flag 2</b>:</span> <?php echo "Are you sure you didn't miss anything? PS: Parameters are fun!"; ?><br>
+        <span><b>Flag 2</b>:</span> <?php echo "Remember, sometimes the most valuable information is hidden in plain sight. Don't forget to read between the lines and explore every aspect of the page. Oh, and keep an eye out for any parameters that might lead you down a path of discovery."; ?><br>
     <?php } ?>
 </p>
 
 <p>
     <?php if(($flag3_checked)) { ?>
         <span style="color: green; font-size: 20px">&#10003;</span>
-        <span style="color: green;"><b>Flag 3</b>:</span> <?php echo "admin account is great, but how can you access admin?"; ?><br>
+        <span style="color: green;"><b>Flag 3</b>:</span> <?php echo "Have you ever wondered what it's like to be admin? Maybe it's time to think outside the box and get creative. And don't forget to check out the home page for another helpful clue!"; ?><br>
     <?php } else { ?>
-        <span><b>Flag 3</b>:</span> <?php echo "admin account is great, but how can you access admin?"; ?><br>
+        <span><b>Flag 3</b>:</span> <?php echo "Have you ever wondered what it's like to be admin? Maybe it's time to think outside the box and get creative. And don't forget to check out the home page for another helpful clue!"; ?><br>
     <?php } ?>
 </p>
 
+        </div>
+        
+        <div class="imp">
+  	<div class="important"><p><strong class="important-heading">Important information:</strong></p>
+    		<p>Our challenges do NOT require any bruteforcing/directory fuzzing/massive amounts of traffic. Please practice hacking on our challenges manually.</p>
+    		<p>Failure to abide by the rules will put you at risk of being disqualified!</p>
+  	</div>
         </div>
         <div class="post">
         	<h2><u>Rules</u></h2>
         	<ul class="rules">
     		<li><p>The format of Flag is as "^FLAG^flagName"</p></li>
-    		<li><p>There is no need for bruteforcing technique of any kind</p></li>
     		<li><p>Please do not use your real email or password</p></li>
     		<li><p>If you find any vulnerabilities and they do not have any Flag, please report them to </p></li>
         </ul>
