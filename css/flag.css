@@ -259,3 +259,21 @@ li {
   font-size: 1.1em;
   margin: 0.5em 0;
 }
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+  margin: 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+

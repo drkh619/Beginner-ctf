@@ -143,6 +143,9 @@ if (isset($_SESSION["flag_checked_time"]) && ($now - $_SESSION["flag_checked_tim
         </div>
     </div>
 	</main>
+	<footer>
+  <p>&copy; 2023 All rights reserved. Designed by <a href="https://github.com/drkh619/">drkh</a>.<img src="../css/github.png" alt="GitHub Logo"></p>
+	</footer>
 </body>
 
 </html>
